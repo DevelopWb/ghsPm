@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/bt_shadow_selecter_default_whilte">
+
+    <ImageView
+        android:id="@+id/notice_item_red_hot_iv"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/notice_red_point_icon"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/notice_item_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/notice_item_title_tag_tv"
+        android:layout_toRightOf="@+id/notice_item_red_hot_iv"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:text="这是一个标题"
+        android:textColor="@color/app_black"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/notice_item_title_tag_tv"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:visibility="gone"
+        android:text="表单任务"
+        android:textSize="12dp"
+        android:background="@mipmap/table_task_top_tag"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/app_white"
+         />
+
+    <TextView
+        android:id="@+id/notice_item_creater_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_below="@+id/notice_item_title_tv"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/notice_item_red_hot_iv"
+        android:paddingLeft="10dp"
+        android:text="姓名"
+
+        android:textColor="#4A4A4A"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/notice_item_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notice_item_title_tv"
+        android:layout_toRightOf="@+id/notice_item_creater_tv"
+        android:text="时间"
+        android:textColor="#4A4A4A"
+
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/notice_item_satsus_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notice_item_title_tv"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/notice_item_arrow_iv"
+        android:text="状态"
+        android:textColor="#F56437"
+
+        android:textSize="12dp" />
+
+    <ImageView
+        android:id="@+id/notice_item_arrow_iv"
+        android:layout_width="5dp"
+        android:layout_height="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/notice_item_title_tv"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="3dp"
+        android:src="@mipmap/use_guide_arrow_right" />
+</RelativeLayout>

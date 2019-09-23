@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/login_include"
+        layout="@layout/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"></include>
+
+    <include
+        layout="@layout/login_check_code_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_include"></include>
+
+</RelativeLayout>
+

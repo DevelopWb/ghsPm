@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/text_gravity_left_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:padding="6dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="left"
+        android:singleLine="true"
+        android:textColor="@color/app_gray"
+        android:textSize="16dp" />
+</LinearLayout>

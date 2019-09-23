@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <include
+        layout="@layout/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/universal_key_select_floor_ll"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_shadow_selecter_default_whilte"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/universal_key_select_floor_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/arrow_down_icon" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/universal_tower_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="楼号"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/universal_key_select_cell_ll"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_shadow_selecter_default_whilte"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/universal_key_select_cell_tv"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/arrow_down_icon" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="单元"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+
+            android:id="@+id/universal_key_open_door_tv"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="@mipmap/sign_bg"
+            android:gravity="center"
+            android:text="一键开门"
+            android:textColor="@color/app_white"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#E0E0E0"></View>
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="最近开门"
+        android:textColor="@color/app_black"
+        android:textSize="18dp" />
+
+    <LinearLayout
+        android:id="@+id/tv_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/universal_recentlyRecylerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#E0E0E0"></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="小区大门"
+            android:textColor="@color/app_black"
+            android:textSize="18dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/universal_key_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

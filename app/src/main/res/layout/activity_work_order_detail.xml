@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/work_detail_root_view_cl"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg_gray"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:id="@+id/header_left_iv"
+        android:layout_width="48dp"
+        android:layout_height="55dp"
+        android:padding="20dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/back_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <TextView
+        android:id="@+id/header_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="详情"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/work_order_more_msg_iv"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/more_msg_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/header_title_tv"
+        app:layout_constraintRight_toLeftOf="@+id/work_order_more_operate_iv"
+        app:layout_constraintTop_toTopOf="@+id/header_title_tv" />
+
+    <ImageView
+        android:id="@+id/work_order_more_operate_iv"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingTop="18dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="18dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/more_action_icon2"
+        app:layout_constraintBottom_toBottomOf="@+id/header_title_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header_title_tv" />
+
+    <View
+        android:id="@+id/header_title_divider_v"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/app_gray_light"
+        app:layout_constraintTop_toBottomOf="@+id/header_title_tv"></View>
+
+    <ScrollView
+        android:id="@+id/order_detatil_sv"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/bootom_ll"
+        android:layout_height="0dp"
+        android:background="@color/app_white"
+        app:layout_constraintTop_toBottomOf="@+id/header_title_divider_v">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/text_style"
+                android:text="工单内容" />
+
+            <TextView
+                android:id="@+id/work_order_content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:text="工单内容"
+                android:textColor="@color/text_color"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/work_older_look_pics_tv"
+                style="@style/text_style"
+                android:paddingTop="1dp"
+                android:text="查看图片"
+                android:textColor="@color/app_default_blue"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/bg_gray_top_bottom_deeper_gray_shape_1px"></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/work_order_detail_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="200dp"></android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/bg_gray_top_bottom_deeper_gray_shape_1px"></View>
+
+            <TextView
+                android:id="@+id/work_order_receipt_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="工单回执"
+                android:textColor="@color/app_default_blue"
+                android:textSize="16dp" />
+            <View
+                android:id="@+id/work_order_receipt_divider_v"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/bg_gray_top_bottom_deeper_gray_shape_1px"></View>
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+                android:text="进展" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/work_order_detail_status_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"></android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/bootom_ll"
+        app:layout_constraintTop_toBottomOf="@+id/order_detatil_sv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_top_bottom_light_gray_shape_1px">
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/work_order_agree_stv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            app:sCenterTextColor="@color/app_default_blue"
+            app:sCenterTextSize="16dp"
+            app:sCenterTextString="通过"
+            app:sCenterTvDrawableHeight="15dp"
+            app:sCenterTvDrawableLeft="@mipmap/right_duihao_icon"
+            app:sCenterTvDrawableWidth="20dp"></com.allen.library.SuperTextView>
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/work_order_reject_stv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            app:sCenterTextColor="@color/app_default_blue"
+            app:sCenterTextSize="16dp"
+            app:sCenterTextString="不通过"
+            app:sCenterTvDrawableHeight="15dp"
+            app:sCenterTvDrawableLeft="@mipmap/wrong_icon"
+            app:sCenterTvDrawableWidth="15dp"></com.allen.library.SuperTextView>
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/work_order_write_progress_stv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            app:sCenterTextColor="@color/app_default_blue"
+            app:sCenterTextSize="16dp"
+            app:sCenterTextString="写进展"
+            app:sCenterTvDrawableHeight="20dp"
+            app:sCenterTvDrawableLeft="@mipmap/write_msg_icon"
+            app:sCenterTvDrawableWidth="20dp"></com.allen.library.SuperTextView>
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_layout_rl"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/app_white"
+   >
+
+    <LinearLayout
+        android:id="@+id/header_left_ll"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/header_left_iv"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:padding="20dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/back_icon"></ImageView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/header_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/header_right_tv"
+        android:layout_toRightOf="@+id/header_left_ll"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/header_right_tv"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16dp" />
+</RelativeLayout>

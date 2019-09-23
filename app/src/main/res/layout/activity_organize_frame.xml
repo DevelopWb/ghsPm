@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <include
+        layout="@layout/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/border_gray_circle_shape"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:layout_width="15dp"
+            android:src="@mipmap/search_icon"
+            android:layout_height="15dp" />
+
+        <EditText
+            android:id="@+id/orgnize_frame_search_et"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@null"
+            android:hint="搜索"
+
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textColor="#9B9B9B"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/orgnize_rv"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/sp_app_default_theme_color"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"></android.support.v7.widget.RecyclerView>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/orgnize_content_rv"
+        android:layout_width="match_parent"
+        android:background="@drawable/sp_app_gray"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

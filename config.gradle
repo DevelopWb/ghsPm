@@ -1,0 +1,23 @@
+def supportVersion = "25.0.0"
+
+ext {
+    versions = [
+            "buildToolsVersion": "26.0.2",
+            "compileSdkVersion": 22,
+            "minSdkVersion"    : 21,
+            "targetSdkVersion" : 21,
+            "versionCode"      : 1,
+            "versionName"      : "1.0"
+    ]
+    dependencies = [
+            "appcompat-v7": "com.android.support:appcompat-v7:${supportVersion}",
+            "cardview-v7" : "com.android.support:cardview-v7:${supportVersion}",
+            "design" : "com.android.support:design:${supportVersion}",
+            "glide" : "com.github.bumptech.glide:glide:3.7.0",
+            "gson" : "com.google.code.gson:gson:2.6.2",
+            "leakcanary-debug" : "com.squareup.leakcanary:leakcanary-android:1.5.2",
+            "leakcanary-release" : "com.squareup.leakcanary:leakcanary-android-no-op:1.5.2",
+    ]
+    status = ["magicalMobile": "true"]//
+
+}

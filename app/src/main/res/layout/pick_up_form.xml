@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top_layout_rl"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/picked_form_cancel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="取消"
+            android:textColor="#8b8b8b"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/patrol_form_info_title_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="提取新表单"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/picked_form_confirm_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="确定"
+            android:textColor="#3478f7"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#F8F8F8"></View>
+
+    <ScrollView
+        android:id="@+id/picked_form_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/picked_form_tag_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="5dp"
+                    android:text="*"
+                    android:textColor="@color/app_red_light"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <TextView
+                    android:id="@+id/picked_form_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="标题"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toRightOf="@+id/picked_form_tag_tv"
+                    tools:ignore="MissingConstraints" />
+
+
+                <EditText
+                    android:id="@+id/picked_form_content_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入"
+                    android:textCursorDrawable="@null"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toRightOf="@+id/picked_form_title_tv"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/picked_form_head_gp_tv"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#F8F8F8"
+                android:gravity="center_vertical"
+                android:paddingLeft="25dp"
+                android:text="表头信息"
+                android:textColor="#9B9B9B"
+                android:textSize="12dp" />
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/picked_form_time_cl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_gray_only_bottom_shape_5dp">
+
+                <TextView
+                    android:id="@+id/picked_form_time_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="时间"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    tools:ignore="MissingConstraints" />
+
+
+                <TextView
+                    android:id="@+id/picked_form_select_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:hint="请选择"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/picked_form_time_title_tv"
+                    app:layout_constraintLeft_toRightOf="@+id/picked_form_time_title_tv"
+                    app:layout_constraintRight_toLeftOf="@+id/picked_form_select_tag"
+                    app:layout_constraintTop_toTopOf="@+id/picked_form_time_title_tv" />
+
+                <ImageView
+                    android:id="@+id/picked_form_select_tag"
+                    android:layout_width="17dp"
+                    android:layout_height="10dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/arror_right"
+                    app:layout_constraintBottom_toBottomOf="@+id/picked_form_time_title_tv"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/picked_form_time_title_tv" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/picked_form_head1_cl"
+                android:layout_width="match_parent"
+
+                android:layout_height="50dp"
+                android:background="@drawable/bg_gray_only_bottom_shape_5dp">
+
+                <TextView
+                    android:id="@+id/picked_form_head_title1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="25dp"
+                    android:text="表头1"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toRightOf="@+id/lack_cord_tag_tv" />
+
+                <EditText
+                    android:id="@+id/picked_form_head_content1_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:textCursorDrawable="@null"
+                    android:hint="请输入"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toRightOf="@+id/picked_form_head_title1_tv"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/picked_form_head2_cl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:background="@drawable/bg_gray_only_bottom_shape_5dp">
+
+                <TextView
+                    android:id="@+id/picked_form_head_title2_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="25dp"
+                    android:text="表头2"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    tools:ignore="MissingConstraints" />
+
+
+                <EditText
+                    android:id="@+id/picked_form_head_content2_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入"
+                    android:textCursorDrawable="@null"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toRightOf="@+id/picked_form_head_title2_tv"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/picked_form_head3_cl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:background="@drawable/bg_gray_only_bottom_shape_5dp">
+
+                <TextView
+                    android:id="@+id/picked_form_head_title3_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="25dp"
+                    android:text="表头3"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    tools:ignore="MissingConstraints" />
+
+
+                <EditText
+                    android:id="@+id/picked_form_head_content3_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入"
+                    android:textCursorDrawable="@null"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toRightOf="@+id/picked_form_head_title3_tv"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/picked_form_head4_cl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_gray_only_bottom_shape_5dp">
+
+                <TextView
+                    android:id="@+id/picked_form_head_title4_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="25dp"
+                    android:text="表头4"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/picked_form_head_content4_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:textCursorDrawable="@null"
+                    android:hint="请输入"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toRightOf="@+id/picked_form_head_title4_tv"
+                    app:layout_constraintRight_toRightOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/picked_form_tail_gp_tv"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#F8F8F8"
+                android:gravity="center_vertical"
+                android:paddingLeft="25dp"
+                android:paddingBottom="3dp"
+                android:text="表尾信息"
+                android:textColor="#9B9B9B"
+                android:textSize="12dp" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/picked_form_des_cl"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+
+                android:background="@drawable/bg_gray_only_bottom_shape_5dp">
+
+                <TextView
+                    android:id="@+id/picked_form_des_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="填写说明"
+                    android:textColor="#9B9B9B"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/picked_form_des_content_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/unclick_gray_deep"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/picked_form_des_tv" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/picked_form_tail1_cl"
+                android:layout_width="match_parent"
+
+                android:layout_height="50dp"
+                android:background="@drawable/bg_gray_only_bottom_shape_5dp">
+
+                <TextView
+                    android:id="@+id/picked_form_tail_title1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="25dp"
+                    android:text="表尾1"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    tools:ignore="MissingConstraints" />
+
+
+                <EditText
+                    android:id="@+id/picked_form_tail_content1_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入"
+                    android:textCursorDrawable="@null"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toRightOf="@+id/picked_form_tail_title1_tv"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/picked_form_tail2_cl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:background="@drawable/bg_gray_only_bottom_shape_5dp">
+
+                <TextView
+                    android:id="@+id/picked_form_tail_title2_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="25dp"
+                    android:text="表尾2"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    tools:ignore="MissingConstraints" />
+
+
+                <EditText
+                    android:id="@+id/picked_form_tail_content2_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:textCursorDrawable="@null"
+                    android:hint="请输入"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toRightOf="@+id/picked_form_tail_title2_tv"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/picked_form_tail3_cl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:background="@drawable/bg_gray_only_bottom_shape_5dp">
+
+                <TextView
+                    android:id="@+id/picked_form_tail_title3_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="25dp"
+                    android:text="表尾3"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    tools:ignore="MissingConstraints" />
+
+
+                <EditText
+                    android:id="@+id/picked_form_tail_content3_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入"
+                    android:textCursorDrawable="@null"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toRightOf="@+id/picked_form_tail_title3_tv"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/picked_form_tail4_cl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:background="@drawable/bg_gray_only_bottom_shape_5dp">
+
+                <TextView
+                    android:id="@+id/picked_form_tail_title4_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="25dp"
+                    android:text="表尾4"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/picked_form_tail_content4_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入"
+                    android:textCursorDrawable="@null"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toRightOf="@+id/picked_form_tail_title4_tv"
+                    app:layout_constraintRight_toRightOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/picked_form_num_cl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="30dp"
+
+                android:background="@drawable/bg_gray_only_bottom_shape_5dp">
+
+                <TextView
+                    android:id="@+id/picked_form_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="25dp"
+                    android:text="编号"
+                    android:textColor="#9B9B9B"
+                    android:textSize="14dp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/picked_form_num_value_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="15dp"
+                    android:textColor="#9B9B9B"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toRightOf="@+id/picked_form_num_tv"
+                    app:layout_constraintRight_toRightOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/inner_repair_tag_name_tv"
+        android:layout_width="100dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rv_white_shadow_shape"
+        android:layout_height="40dp" />
+</LinearLayout>

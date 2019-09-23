@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <include
+        layout="@layout/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"></include>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/divider_hor_line_sp"></View>
+
+    <com.ghs.ghspm.customView.TextViewImageView
+        android:id="@+id/set_use_guide_mcv"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        app:left_button_text="使用指南"
+        app:left_button_text_color="#1A1A1A"
+        app:right_button_drawable="@mipmap/arror_right"></com.ghs.ghspm.customView.TextViewImageView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="#FFF1F1F1"></View>
+
+    <com.ghs.ghspm.customView.TwoTextView
+        android:id="@+id/set_user_version_siv"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="5dp"
+        app:left_button_text="版本号"
+        app:left_button_text_color="#000000"
+        app:right_button_text="3.14M"
+        app:right_button_text_color="#FF9B9B9B"></com.ghs.ghspm.customView.TwoTextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="#FFF1F1F1"></View>
+
+    <com.ghs.ghspm.customView.TextViewImageView
+        android:id="@+id/set_use_suggestion_mcv"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        app:left_button_text="投诉建议"
+        app:left_button_text_color="#1A1A1A"
+        app:right_button_drawable="@mipmap/arror_right"></com.ghs.ghspm.customView.TextViewImageView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="#FFF1F1F1"></View>
+
+    <com.ghs.ghspm.customView.TwoTextView
+        android:id="@+id/set_user_clear_cache_siv"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="5dp"
+        app:left_button_text="清除缓存"
+        app:left_button_text_color="#000000"
+        app:right_button_text="3.14M"
+        app:right_button_text_color="#FF9B9B9B"></com.ghs.ghspm.customView.TwoTextView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="#FFF1F1F1"></View>
+
+    <com.ghs.ghspm.customView.TextViewImageView
+        android:id="@+id/set_use_protocol_mcv"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        app:left_button_text="用户协议"
+        app:left_button_text_color="#1A1A1A"
+        app:right_button_drawable="@mipmap/arror_right"></com.ghs.ghspm.customView.TextViewImageView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="#FFF1F1F1"></View>
+
+    <com.ghs.ghspm.customView.TwoTextView
+        android:id="@+id/set_user_quit_siv"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="5dp"
+        app:left_button_text="退出"
+        app:left_button_text_color="#000000"
+        app:right_button_text_color="#FF9B9B9B"></com.ghs.ghspm.customView.TwoTextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="#FFF1F1F1"></View>
+
+</LinearLayout>

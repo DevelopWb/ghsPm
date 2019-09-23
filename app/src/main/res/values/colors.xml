@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#2096f0</color>
+    <color name="navigition_press">#FFFFFF</color>
+    <color name="app_red_light">#EE0004</color>
+    <color name="app_black">#000000</color>
+    <color name="app_white">#ffffff</color>
+    <color name="app_gray">#5F5F5F</color>
+    <color name="text_color">#333333</color>
+    <color name="app_gray_light">#E0E0E0</color>
+    <color name="press_gray">#30cccccc</color>
+    <color name="blue">#2367C9</color>
+    <color name="app_default_blue">#2096f0</color>
+    <color name="unclick_gray_deep">#E0E0E0</color>
+    <color name="hint_color">#979797</color>
+    <color name="text_cancel">#9B9B9B</color>
+    <color name="patrol_form_selected_color">#E0EFFC</color>
+    <color name="car_info_gray">#FAFAFA</color>
+    <color name="allot_key_yellow">#F9CC4F</color>
+    <color name="owner_list_backgroud_blue">#45C8C3</color>
+    <color name="form_button_backgroud_gray">#E1E1E1</color>
+    <color name="activity_bg_gray">#F7F7F7</color>
+</resources>

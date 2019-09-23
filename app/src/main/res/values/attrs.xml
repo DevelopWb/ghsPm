@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Switch">
+        <attr name="checked" format="reference|boolean" />
+        <attr name="switchOnColor" format="reference|color" />
+        <attr name="switchOffColor" format="reference|color" />
+        <attr name="spotOnColor" format="reference|color" />
+        <attr name="spotOffColor" format="reference|color" />
+        <attr name="switchOnStrokeColor" format="reference|color" />
+        <attr name="switchOffStrokeColor" format="reference|color" />
+        <attr name="spotPadding" format="reference|dimension" />
+        <attr name="duration" format="reference|integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RatingBar">
+        <!--星星间距-->
+        <attr name="starDistance" format="dimension" />
+        <!--星星大小-->
+        <attr name="starSize" format="dimension" />
+        <!--星星个数-->
+        <attr name="starCount" format="integer" />
+        <!--星星空图-->
+        <attr name="starEmpty" format="reference" />
+        <!--星星满图-->
+        <attr name="starFill" format="reference" />
+
+    </declare-styleable>
+    <declare-styleable name="MProgressBar">
+        <attr name="top_textSize" format="dimension" />
+        <attr name="progressBarHeight" format="dimension" />
+        <attr name="top_textColor" format="color" />
+        <attr name="bottom_textColor" format="color" />
+        <attr name="bottom_textSize" format="dimension" />
+        <attr name="top_textBackground" format="reference|integer" />
+    </declare-styleable>
+</resources>

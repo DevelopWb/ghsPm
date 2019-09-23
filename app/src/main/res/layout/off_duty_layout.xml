@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/off_duty_notice_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/offduty_icon" />
+
+    <TextView
+        android:id="@+id/off_duty_notice_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="今日未排班"
+        android:textColor="#D3D3D3"
+        android:textSize="14dp" />
+
+
+</LinearLayout>

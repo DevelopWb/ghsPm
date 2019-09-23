@@ -1,0 +1,118 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+    <declare-styleable name="OrganizeUserView">
+        <attr name="title_background_color" format="reference|integer" />
+        <attr name="left_button_visible" format="boolean" />
+        <attr name="right_button_visible" format="boolean" />
+        <attr name="title_text" format="string" />
+        <attr name="title_text_color" format="color" />
+        <attr name="title_text_drawable" format="reference|integer" />
+        <attr name="right_button_text" format="string" />
+        <attr name="right_button_text_color" format="color" />
+        <attr name="right_button_drawable" format="reference|integer" />
+        <attr name="right_button_drawable_width" format="dimension" />
+        <attr name="right_button_drawable_height" format="dimension" />
+        <attr name="left_button_text" format="string" />
+        <attr name="left_button_text_color" format="color" />
+        <attr name="left_button_drawable" format="reference|integer" />
+    </declare-styleable>
+    <!--避免第一次进来白屏或黑屏-->
+    <style name="AppTheme.Splash">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/splash_drawable</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- 自定义Dialog -->
+    <style name="MNCustomDialog" parent="@android:style/Theme.Dialog">
+        <!-- 无边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--无遮罩效果-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:textColor">@color/app_gray</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="edit_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:background">@drawable/bg_white_only_bottom_gray_shape_1px</item>
+        <item name="android:maxLength">300</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="ghs_pm_bt_default">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:background">@drawable/bt_selecter_default_app_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:letterSpacing">0.2</item>
+        <item name="android:textColor">@color/app_white</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+    <declare-styleable name="CustomActionBar">
+        <attr name="action_bar_background" format="reference|integer" />
+        <attr name="action_bar_title_text" format="string" />
+        <attr name="action_bar_title_text_color" format="color" />
+        <attr name="action_bar_title_text_drawable" format="reference|integer" />
+        <attr name="action_bar_title_text_size" format="dimension" />
+        <attr name="action_bar_left_text" format="string" />
+        <attr name="action_bar_left_text_color" format="color" />
+        <attr name="action_bar_left_text_drawable" format="reference|integer" />
+        <attr name="action_bar_left_text_size" format="dimension" />
+        <attr name="action_bar_right_text" format="string" />
+        <attr name="action_bar_right_text_color" format="color" />
+        <attr name="action_bar_right_text_drawable" format="reference|integer" />
+        <attr name="action_bar_right_text_size" format="dimension" />
+        <attr name="action_bar_left_image_src" format="reference|integer" />
+        <attr name="action_bar_right_image_src" format="reference|integer" />
+    </declare-styleable>
+    <declare-styleable name="MNProgressWheel">
+        <attr name="mn_progressIndeterminate" format="boolean" />
+        <attr name="mn_barColor" format="color" />
+        <attr name="mn_rimColor" format="color" />
+        <attr name="mn_rimWidth" format="dimension" />
+        <attr name="mn_spinSpeed" format="float" />
+        <attr name="mn_barSpinCycleTime" format="integer" />
+        <attr name="mn_circleRadius" format="dimension" />
+        <attr name="mn_fillRadius" format="boolean" />
+        <attr name="mn_barWidth" format="dimension" />
+        <attr name="mn_linearProgress" format="boolean" />
+    </declare-styleable>
+</resources>

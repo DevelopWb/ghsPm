@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="73dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/form_filling_item_image"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/ic_launcher" />
+
+
+    <LinearLayout
+        android:layout_marginLeft="16dp"
+        android:layout_width="254dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/form_filling_item_title"
+            android:layout_width="245dp"
+            android:layout_height="22dp"
+            android:paddingLeft="10dp"
+            android:textColor="#1A1A1A"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/form_filling_item_image"
+            android:text="发电机二月份巡查记录"
+            android:layout_marginBottom="5dp"
+            />
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:id="@+id/form_filling_item_time"
+            android:layout_width="245dp"
+            android:layout_height="15dp"
+            android:layout_margin="5dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/patrol_arrow_right_tv"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/arror_right" />
+
+</RelativeLayout>

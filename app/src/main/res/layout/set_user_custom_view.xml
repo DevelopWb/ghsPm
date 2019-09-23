@@ -1,0 +1,37 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/mine_edit_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:clickable="false"
+        android:minHeight="45dp"
+        android:minWidth="45dp"
+        android:textAllCaps="false"
+        android:gravity="left|center"
+        android:textSize="16dp" />
+
+
+    <TextView
+        android:id="@+id/mine_edit_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/mine_edit_left"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textAllCaps="false"
+        android:layout_marginLeft="10dp"
+        android:singleLine="true"
+        android:minHeight="45dp"
+        android:minWidth="45dp"
+        android:ellipsize="end"
+        android:focusable="false"
+        android:textSize="16dp"
+        android:gravity="right|center"
+        android:clickable="false"
+        />
+
+</merge>

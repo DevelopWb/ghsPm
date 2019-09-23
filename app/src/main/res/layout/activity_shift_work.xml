@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <include
+        layout="@layout/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"></include>
+    <include
+        layout="@layout/sign_user_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></include>
+
+    <TextView
+        android:id="@+id/shift_work_type_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="早班：8:00-18:00(前后30分钟有效)"
+        android:textColor="#808080"
+        android:textSize="14dp" />
+    <TextView
+        android:id="@+id/shift_work_leader_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="负责人：李四"
+        android:textColor="#808080"
+        android:textSize="14dp" />
+    <TextView
+        android:id="@+id/shift_work_creater_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="创建人：李四"
+        android:textColor="#808080"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/open_record_circle_default_color_shape" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:text="开始工作打卡"
+            android:textColor="#808080"
+            android:textSize="14dp" />
+        <TextView
+            android:id="@+id/shift_work_on_work_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_marginRight="25dp"
+            android:background="@color/app_gray"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="已打卡"
+            android:textColor="#808080"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/virture_line_vertical"
+        android:layerType="software"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/open_record_circle_default_color_shape" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:layout_weight="1"
+            android:text="结束工作打卡"
+            android:textColor="#808080"
+            android:textSize="14dp" />
+        <TextView
+            android:id="@+id/shift_work_off_work_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_marginRight="25dp"
+            android:background="@color/app_gray"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="已打卡"
+            android:textColor="#808080"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

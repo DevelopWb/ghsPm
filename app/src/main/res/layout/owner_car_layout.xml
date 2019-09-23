@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="440dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/owner_car_pai"
+            android:layout_width="200dp"
+            android:layout_marginRight="16dp"
+            android:layout_height="40dp"
+            android:textColor="#000000"
+            android:text="京N A88888"
+            android:textSize="20dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="15dp"
+                    android:textColor="#9B9B9B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="车辆型号" />
+
+                <TextView
+                    android:id="@+id/owner_car_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="15dp"
+                    android:textColor="#4A4A4A"
+                    android:layout_marginLeft="25dp"
+                    android:text="奥迪r8" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="15dp"
+                    android:textColor="#9B9B9B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="车辆年份" />
+
+                <TextView
+                    android:id="@+id/owner_car_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="15dp"
+                    android:textColor="#4A4A4A"
+                    android:layout_marginLeft="25dp"
+                    android:text="2015年" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="6dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="15dp"
+                    android:textColor="#9B9B9B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="车辆颜色" />
+
+                <TextView
+                    android:textSize="15dp"
+                    android:textColor="#4A4A4A"
+                    android:layout_marginLeft="25dp"
+                    android:id="@+id/owner_car_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="黑色" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="6dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="15dp"
+                    android:textColor="#9B9B9B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="车位编号" />
+
+                <TextView
+
+                    android:id="@+id/owner_car_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="15dp"
+                    android:textColor="#4A4A4A"
+                    android:layout_marginLeft="25dp"
+                    android:text="654327" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+

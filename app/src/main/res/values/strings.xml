@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">光合物管</string>
+    <string name="mine_set_quit_notice">退出不会删除任何历史数据，下次可直接使用手机号登录</string>
+
+    <string name="notifyTitle">提示</string>
+    <string name="gpsNotifyMsg">当前应用需要开启GPS。\n\n请点击\"设置\"-\"定位服务\"-打开定位功能,选择含有GPS的定位模式</string>
+    <string name="setting">设置</string>
+    <string name="perm_tip">
+        当前应用缺少必要权限。\n请点击"设置"-"权限"-打开所需权限。
+    </string>
+    <string name="perm_ask_again">请给予应用必要权限，让程序可正常工作。</string>
+    <string name="perm_camera_store">请给予应用相机权限和存储权限，让程序可正常工作。</string>
+    <string name="perm_location">请给予应用定位权限，让程序可正常工作。</string>
+    <string name="perm_call">请给予应用拨打电话的权限，让程序可正常工作。</string>
+    <string name="cancel">取消</string>
+</resources>

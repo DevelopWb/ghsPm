@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:gravity="center"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginTop="4dp"
+    android:layout_height="76dp">
+
+    <TextView
+        android:id="@+id/universal_key_door_name_tv"
+        android:layout_width="99dp"
+        android:layout_height="76dp"
+        android:gravity="center"
+        android:background="@drawable/bt_shadow_selecter_default_whilte"
+        android:text="小区东门"
+        android:textColor="@color/app_default_blue"
+        android:textSize="18sp" />
+
+</LinearLayout>

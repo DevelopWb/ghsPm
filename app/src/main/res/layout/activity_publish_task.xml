@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    android:fitsSystemWindows="true"
+   >
+
+
+    <include
+        android:layout_alignParentTop="true"
+        layout="@layout/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"></include>
+
+    <ScrollView
+        android:layout_below="@+id/top_layout_rl"
+        android:layout_marginBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rv_white_shadow_shape"
+                android:minHeight="200dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/publish_task_content_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:hint="请输入内容..."
+                    android:inputType="textMultiLine"
+                    android:maxLength="300"
+                    android:minHeight="100dp"
+                    android:padding="15dp"
+                    android:textSize="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|center"
+                    android:minHeight="60dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/publish_task_rv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"></android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="地址（可不选择）"
+                android:textColor="@color/app_black"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bt_shadow_selecter_default_whilte"
+                android:baselineAligned="false"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/publish_task_select_tower_ll"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/publish_task_addr_tower_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="楼号"
+                        android:textColor="#9B9B9B"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@mipmap/publish_notice_arrow_down" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/publish_task_select_cell_ll"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/publish_task_addr_cell_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="单元"
+                        android:textColor="#9B9B9B"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@mipmap/publish_notice_arrow_down" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="起止时间（可不选择）"
+                android:textColor="@color/app_black"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bt_shadow_selecter_default_whilte"
+                android:baselineAligned="false"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/publish_task_select_start_time_ll"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/publish_task_start_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="开始时间"
+                        android:textColor="#9B9B9B"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@mipmap/publish_notice_arrow_down" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/publish_task_select_end_time_ll"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/publish_task_end_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="结束时间"
+                        android:textColor="#9B9B9B"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@mipmap/publish_notice_arrow_down" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/task_executor_fb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:src="@mipmap/key_manager_add_key"
+                        app:backgroundTint="@color/app_white"
+                        app:fabSize="mini" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="执行人"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/task_executor_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/task_leader_fb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:src="@mipmap/key_manager_add_key"
+                        app:backgroundTint="@color/app_white"
+                        app:fabSize="mini" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="负责人"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/task_leader_tv"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/task_duplicate_fb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:src="@mipmap/key_manager_add_key"
+                        app:backgroundTint="@color/app_white"
+                        app:fabSize="mini" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="抄送人"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/task_duplicate_tv"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/publish_task_confirm_tv"
+        android:layout_width="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/bt_shadow_selecter_default_yellow"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="确定"
+        android:textColor="@color/app_black"
+        android:textSize="18dp" />
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <include
+        layout="@layout/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"></include>
+
+    <TextView
+        android:id="@+id/car_msg_upload_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:text="京N 123456"
+        android:textSize="24dp" />
+
+    <fragment
+        android:layout_margin="15dp"
+        android:id="@+id/select_photos_fg"
+        android:name="com.ghs.ghspm.base.displayPhotos.SelectPhotosToUploadFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></fragment>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+        <TextView
+            android:id="@+id/car_msg_upload_comfirm_tv"
+            android:text="确定"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            style="@style/ghs_pm_bt_default" />
+        <TextView
+            android:id="@+id/car_msg_upload_cancel_tv"
+            android:text="取消"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            style="@style/ghs_pm_bt_default" />
+
+    </LinearLayout>
+</LinearLayout>

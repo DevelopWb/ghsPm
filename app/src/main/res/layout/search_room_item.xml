@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+   >
+
+    <TextView
+        android:id="@+id/searched_room_num_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_only_bottom_gray_shape_1px"
+        android:ellipsize="end"
+        android:gravity="center|left"
+        android:padding="15dp"
+        android:singleLine="true"
+        android:text="内容"
+        android:textColor="#000000"
+        android:textSize="16dp" />
+</LinearLayout>

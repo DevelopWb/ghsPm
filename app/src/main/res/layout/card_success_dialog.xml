@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_marginTop="70dp"
+        android:layout_width="50dp"
+        android:src="@mipmap/card_succeed_addr_icon"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/card_success_clock_time_tv"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="#46C9C3"
+        android:textSize="32dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:src="@mipmap/card_succeed_icon"
+            android:layout_height="18dp" />
+
+        <TextView
+            android:id="@+id/card_success_type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="#46C9C3"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E3E3"></View>
+
+    <TextView
+        android:id="@+id/card_success_knowed_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp"
+        android:text="知道了"
+        android:textColor="#46C9C3"
+        android:textSize="18dp" />
+</LinearLayout>

@@ -1,0 +1,24 @@
+.DS_Store
+/captures
+.externalNativeBuild
+
+# Gradle files
+.gradle/
+/build
+
+# 本地配置文件 (sdk path, etc)
+local.properties
+
+
+# 日志文件
+*.log
+
+# Android Studio导航编辑器临时文件
+.navigation/
+
+# Android Studio captures folder
+captures/
+
+# IntelliJ (IDE配置文件)
+*.iml
+.idea/

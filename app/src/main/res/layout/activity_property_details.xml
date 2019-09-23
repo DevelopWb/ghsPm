@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/activity_bg_gray"
+    android:orientation="vertical"
+    tools:context=".models.workdesk.checkVisitor.DealVisitorRequestActivity">
+
+    <include
+        layout="@layout/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/sp_white"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="物业信息"
+            android:textColor="#333333"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/property_deails_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="到访地址："
+            android:textSize="16dp"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="访客信息"
+            android:textColor="#333333"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/property_deails_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="访客姓名："
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/property_deails_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="手机号码："
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/property_deails_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="到访时间："
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/property_deails_cause"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="到访原因："
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/property_deails_car_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="是否驾车："
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/property_deails_car_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="车牌号码："
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/property_deails_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="审核状态："
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/property_deails_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="临时密码："
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/access_visitor_request_warn_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@mipmap/warn_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="开门密码会以短信的形式发送至被邀访客手机"
+            android:textColor="#5F5F5F"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/work_order_reject_stv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:sBackgroundDrawableRes="@drawable/bg_white_top_bottom_light_gray_shape_1px"
+            android:layout_weight="1"
+            app:sCenterTextColor="@color/app_default_blue"
+            app:sCenterTextSize="16dp"
+            app:sCenterTextString="拒绝"
+            app:sCenterTvDrawableHeight="15dp"
+            app:sCenterTvDrawableLeft="@mipmap/wrong_icon"
+            app:sCenterTvDrawableWidth="15dp"></com.allen.library.SuperTextView>
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/work_order_write_progress_stv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            app:sBackgroundDrawableRes="@drawable/bg_white_top_bottom_light_gray_shape_1px"
+            app:sCenterTextColor="@color/app_default_blue"
+            app:sCenterTextSize="16dp"
+            app:sCenterTextString="审核通过"
+            app:sCenterTvDrawableHeight="15dp"
+            app:sCenterTvDrawableLeft="@mipmap/right_duihao_icon"
+            app:sCenterTvDrawableWidth="20dp"></com.allen.library.SuperTextView>
+
+    </LinearLayout>
+
+</LinearLayout>

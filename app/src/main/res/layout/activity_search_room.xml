@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg_gray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".models.workOrder.createOrder.SearchRoomActivity">
+
+    <include
+        layout="@layout/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@color/app_white">
+
+        <SearchView
+            android:id="@+id/search_room_sv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/border_gray_circle_shape"
+            android:iconifiedByDefault="false"
+            android:queryBackground="@null"
+            android:queryHint="请输入要搜索的房间号"
+            android:showDividers="none"
+            android:submitBackground="@null"></SearchView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_room_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp"></android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

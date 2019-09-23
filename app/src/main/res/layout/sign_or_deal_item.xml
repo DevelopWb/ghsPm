@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp">
+
+    <TextView
+        android:id="@+id/sign_or_deal_key_tv"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:paddingLeft="15dp"
+        android:paddingRight="5dp"
+        android:text="key"
+        android:textColor="#9B9B9B"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/sign_or_deal_value_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="value"
+        android:background="@null"
+        android:textColor="@color/app_black"
+        android:textSize="14dp"
+      />
+
+</LinearLayout>

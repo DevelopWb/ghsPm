@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/dynamic_layout_cl"
+    android:layout_marginBottom="15dp"
+    android:background="@color/app_white">
+
+    <TextView
+        android:id="@+id/lack_cord_tag_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="5dp"
+        android:text="*"
+        android:textColor="@color/app_red_light"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/reason_of_abcence_title_tv"
+        app:layout_constraintTop_toTopOf="@+id/reason_of_abcence_title_tv" />
+
+    <TextView
+        android:id="@+id/reason_of_abcence_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        android:text="楼号"
+        android:textColor="@color/app_black"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toRightOf="@+id/lack_cord_tag_tv" />
+
+
+    <TextView
+        android:id="@+id/dynamic_layout_select_tv"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|right"
+        android:hint="请选择"
+        android:textColor="@color/app_black"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/reason_of_abcence_title_tv"
+        app:layout_constraintLeft_toRightOf="@+id/reason_of_abcence_title_tv"
+        app:layout_constraintRight_toLeftOf="@+id/dynamic_layout_select_tag"
+        app:layout_constraintTop_toTopOf="@+id/reason_of_abcence_title_tv" />
+
+    <ImageView
+        android:id="@+id/dynamic_layout_select_tag"
+        android:layout_width="17dp"
+        android:layout_height="10dp"
+        android:layout_marginRight="15dp"
+        android:src="@mipmap/arror_right"
+        app:layout_constraintBottom_toBottomOf="@+id/reason_of_abcence_title_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/reason_of_abcence_title_tv" />
+</android.support.constraint.ConstraintLayout>

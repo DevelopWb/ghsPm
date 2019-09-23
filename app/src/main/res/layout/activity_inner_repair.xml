@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <include
+        layout="@layout/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ques_menu_rv"
+            android:background="@drawable/border_gray_normal_shape"
+            android:layout_width="90dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:id="@+id/tag_title_tv"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="请选择问题标签"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:id="@+id/ques_tags_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="14dp"
+                    android:text="请选择位置（大概位置）"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:id="@+id/select_tower_ll"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bt_shadow_selecter_default_whilte"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+
+                        <TextView
+                            android:id="@+id/select_tower_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="请选择"
+                            android:textColor="#000000"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:scaleType="fitCenter"
+                            android:src="@mipmap/publish_notice_arrow_down" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tower_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="楼号"
+                        android:textColor="#000000"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:id="@+id/select_cell_ll"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bt_shadow_selecter_default_whilte"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+
+                        <TextView
+                            android:id="@+id/select_cell_tv"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="请选择"
+                            android:textColor="#000000"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@mipmap/publish_notice_arrow_down" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="单元"
+                        android:textColor="#000000"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="14dp"
+                    android:paddingTop="14dp"
+                    android:text="请输入问题描述（可添加图片）"
+                    android:textColor="@color/app_black"
+                    android:textSize="14dp" />
+
+                <fragment
+                    android:id="@+id/select_photos_fg"
+                    android:name="com.ghs.ghspm.base.displayPhotos.SelectPhotosToUploadFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></fragment>
+
+                <TextView
+                    android:id="@+id/commit_tv"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="14dp"
+                    android:background="@drawable/bt_shadow_selecter_default_green"
+                    android:gravity="center"
+                    android:paddingBottom="12dp"
+                    android:paddingTop="12dp"
+                    android:text="提交"
+                    android:textColor="@color/app_white"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

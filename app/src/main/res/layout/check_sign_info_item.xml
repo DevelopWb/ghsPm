@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp">
+
+        <ImageView
+            android:id="@+id/work_sign_tag_iv"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/open_record_circle_default_color_shape"
+            app:layout_constraintBottom_toBottomOf="@+id/work_type_tv"
+            app:layout_constraintTop_toTopOf="@+id/work_type_tv" />
+
+        <View
+            android:id="@+id/work_sign_virtual_line"
+            android:layout_width="1dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/virture_line_vertical"
+            android:layerType="software"
+            app:layout_constraintLeft_toLeftOf="@+id/work_sign_tag_iv"
+            app:layout_constraintRight_toRightOf="@+id/work_sign_tag_iv"
+            app:layout_constraintTop_toBottomOf="@+id/work_sign_tag_iv"></View>
+
+        <TextView
+            android:id="@+id/work_type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="上班时间"
+            android:textColor="@color/app_gray"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toRightOf="@+id/work_sign_tag_iv" />
+
+        <TextView
+            android:id="@+id/work_sign_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="10dp"
+            android:text="2019.1.17"
+            android:textColor="@color/app_gray"
+            android:textSize="12dp"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/sign_status_cl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            app:layout_constraintLeft_toLeftOf="@+id/work_type_tv"
+            app:layout_constraintTop_toBottomOf="@+id/work_type_tv">
+
+            <TextView
+                android:id="@+id/sign_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="打卡时间"
+                android:textColor="@color/app_black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/sign_abnormal_tag_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_border_yellow_shape"
+                android:paddingBottom="1dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="1dp"
+                android:textColor="@color/allot_key_yellow"
+                android:textSize="12dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/sign_time_tv"
+                app:layout_constraintLeft_toRightOf="@+id/sign_time_tv"
+                app:layout_constraintTop_toTopOf="@+id/sign_time_tv" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.constraint.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/sign_addr_icon_iv"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@mipmap/sign_addr_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/sign_addr_tv"
+            app:layout_constraintLeft_toLeftOf="@+id/sign_status_cl"
+            app:layout_constraintTop_toTopOf="@+id/sign_addr_tv" />
+
+        <TextView
+            android:id="@+id/sign_addr_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="7dp"
+            android:text="地址"
+            android:textColor="@color/app_gray"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toRightOf="@+id/sign_addr_icon_iv"
+            app:layout_constraintTop_toBottomOf="@+id/sign_status_cl" />
+
+        <TextView
+            android:id="@+id/sign_update_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="7dp"
+            android:textColor="#229BD5"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toLeftOf="@+id/work_type_tv"
+            app:layout_constraintTop_toBottomOf="@+id/sign_addr_icon_iv" />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

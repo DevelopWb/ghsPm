@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/top_title_layout_ll"
+        layout="@layout/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"></include>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/detail_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/table_task_deal_tv"
+        android:layout_below="@+id/top_title_layout_ll"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/rv_white_shadow_shape"
+        android:paddingBottom="15dp"></android.support.v7.widget.RecyclerView>
+
+
+    <TextView
+        android:id="@+id/table_task_deal_tv"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/bt_selecter_default_app_color"
+        android:gravity="center"
+        android:textColor="@color/app_white"
+        android:textSize="18dp"
+        android:visibility="gone" />
+</RelativeLayout>

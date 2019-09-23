@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/village_msg_cl"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/work_order_type_cl"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/village_addr_icon_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            android:src="@mipmap/addr_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/villiage_name_tv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/villiage_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxWidth="150dp"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:textSize="18dp"
+            app:layout_constraintLeft_toRightOf="@+id/village_addr_icon_iv" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/change_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/villiage_name_tv"
+            app:layout_constraintLeft_toRightOf="@+id/villiage_name_tv"
+            app:layout_constraintTop_toTopOf="@+id/villiage_name_tv" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/work_order_type_cl"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/village_msg_cl"
+        app:layout_constraintTop_toTopOf="@+id/village_msg_cl">
+
+
+        <TextView
+            android:id="@+id/work_order_type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|right"
+            android:text="待我跟进"
+            android:textColor="@color/app_black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/work_order_type_tag_iv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/work_order_type_tag_iv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/arror_down"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/work_older_rf"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/village_msg_cl">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/work_order_rv"
+            android:background="@color/activity_bg_gray"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ImageView
+        android:id="@+id/creat_order_iv"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_margin="25dp"
+        android:src="@mipmap/creat_order_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>

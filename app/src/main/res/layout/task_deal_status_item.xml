@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="15dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/order_operate_head_pic_iv"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/publish_task_grey_shadow_circle"
+          />
+
+        <TextView
+            android:id="@+id/order_operate_action_tv"
+            android:layout_toRightOf="@+id/order_operate_head_pic_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/order_operate_creat_time_tv"
+            android:layout_marginLeft="5dp"
+            android:textColor="#9B9B9B"
+            android:textSize="14dp"
+          />
+
+        <TextView
+            android:id="@+id/order_operate_creat_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_alignParentRight="true"
+            android:textColor="#9B9B9B"
+            android:textSize="14dp"
+            />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/order_operate_remark_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:textSize="14dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/order_operate_item_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

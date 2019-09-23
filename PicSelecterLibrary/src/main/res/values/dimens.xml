@@ -1,0 +1,7 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="image_head_height">48dp</dimen>
+    <dimen name="image_folder_height">90dp</dimen>
+    <dimen name="layout_folder_name_width">100dp</dimen>
+</resources>

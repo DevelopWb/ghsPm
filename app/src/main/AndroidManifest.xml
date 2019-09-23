@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ghs.ghspm">
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="oppo.permission.OPPO_COMPONENT_SAFE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFMyMessageIntentServiceI_STATE" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <application
+        android:name=".HotfixStubApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ghpm_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".models.workdesk.checkVisitor.PropertyVisitorDetailActivity"></activity>
+        <activity
+            android:name=".models.main.SplashActivity"
+            android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".base.promission.PromissionManagerActivity" />
+        <activity
+            android:name=".models.workOrder.workOrderDetail.WriteProgressActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workOrder.workOrderDetail.WorkOrderReceiptActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".models.workOrder.workOrderDetail.MoreOrderMsgActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workOrder.workOrderDetail.WorkOrderDetailActivity"
+            android:launchMode="singleTop" /> <!-- authorities="你的包名+fileprovider" -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.ghs.ghspm.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity
+            android:name=".models.workdesk.patrolForm.creatPatrolForm.PatrolTaskFormRecordActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".models.workdesk.patrolForm.formStatusInfo.ModifyPatrolFormInfoActivity" />
+        <activity
+            android:name=".models.workdesk.patrolForm.formStatusInfo.PatrolFormPreviewActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".models.workdesk.patrolForm.PatrolCheckUpdateActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.login.selectProperty.SelectPropertyActivity"
+            android:launchMode="singleTop" />
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.2" />
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="ee3c02d2b28ab160d3aa1de3b7722951" />
+
+        <activity
+            android:name=".models.push.PUPActivity"
+            android:exported="true"
+            android:launchMode="singleTask" /> <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity
+            android:name=".models.main.MainActivity"
+            android:alwaysRetainTaskState="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".models.login.LoginActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.publicfuction.signIn.SignInActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.publicfuction.universalkey.UniversalKeyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.publicfuction.notice.NoticeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.usualtasksign.UsualTaskSignActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.usualtasksign.shiftwork.ShiftWorkActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.usualtasksign.patrolwork.PatrolWorkActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.carnum.CarNumActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.organizeframe.OrganizeFrameActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.carnum.carinfodetail.CarInfoDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.carnum.uploadwrongofcar.UploadCarMsgActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.publicfuction.notice.unnormalnotice.UnNormalNoticeDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.publicfuction.notice.publishNotice.PublishNoticeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.publicfuction.notice.normalnotice.NormalNoticeDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.mine.personalInfo.modifymobile.ModifyMobileActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.mine.set.UserProtocalActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="cn.com.mark.multiimage.core.ImageMainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="cn.com.mark.multiimage.core.PreviewActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.publicfuction.notice.publishNotice.selectDeps.SelectSectionActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.mine.personalInfo.PersonalInfoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.mine.set.SetActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.task.publishtask.PublishTaskActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.task.TaskDetailInfoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.task.publishtask.SelectRelatedPeopleActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.publicfuction.signIn.monthrecord.MonthRecordActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.waterrecord.WaterRecordActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.waterrecord.SaveWaterRecordActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.mine.set.useguide.UserGuideActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.mine.set.useguide.UserGuideDisplayActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.innerrepair.InnerRepairActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.task.pushedTaskShow.TaskFragmentActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".models.workdesk.signAndTable.SignAndTableActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.signAndTable.formTaskRecordRelatedToMe.RecordOfMineActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.signAndTable.tableTaskToDo.tableTaskDescribe.TableTaskDesActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.signAndTable.tableTaskToDo.formTaskSign.autoForm.AutoFormActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".base.displayPhotos.DisplayPhotosActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.signAndTable.tableTaskToDo.formTaskSign.commonSign.CommonSignActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.signAndTable.tableTaskToDo.createForm.CreateFormActivity"
+            android:launchMode="singleTop" /> <!-- value的值填写你在友盟后台申请的应用Appkey -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5bd6b976b465f5d330000037" /> <!-- value的值填写渠道名称，例如yingyongbao。这里设置动态渠道名称变量 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" /> <!-- &lt;!&ndash;value的值填写渠道名称，例如yingyongbao。这里设置动态渠道名称变量&ndash;&gt; -->
+        <!-- <meta-data android:value="${UMENG_CHANNEL_VALUE}" android:name="UMENG_CHANNEL"/> -->
+        <activity android:name=".models.workdesk.ownerinfo.OwnerInfoeActivity" /> <!-- 阿里推送以下 -->
+        <meta-data
+            android:name="com.alibaba.app.appkey"
+            android:value="25233966" /> <!-- 请填写你自己的- appKey -->
+        <meta-data
+            android:name="com.alibaba.app.appsecret"
+            android:value="f8d61a918d53024d081fb71133ed4b64" /> <!-- 请填写你自己的appSecret -->
+        <!-- 华为推送（辅助窗口需要注册appid） value的值“xxx”用实际申请的应用ID替换，来源于开发者联盟网站应用的服务详情。 -->
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=100482775" />
+
+        <service
+            android:name=".models.push.MyMessageIntentService"
+            android:exported="false">
+            <intent-filter>
+                 
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED" />
+            </intent-filter>
+            <intent-filter>
+                     
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_REMOVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".models.push.MyMessageReceiver">
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_REMOVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.taobao.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.RECEIVE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver> <!-- 阿里推送以上 -->
+        <activity
+            android:name=".models.workdesk.publicfuction.signIn.applyReCard.ApplyReCardActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.publicfuction.signIn.attendanceRule.AttendanceRuleActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.arrangeShift.ArrangeShiftActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.mine.systemNotice.SystemNoticeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.ownerinfo.illegally.IllegallyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.moretools.MoreToolsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.task.waittodealtask.ModificationActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.patrolForm.fillingForms.FormFillingActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workdesk.patrolForm.formcomplete.FormCompleteActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workOrder.createOrder.CreateOrderActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workOrder.createOrder.SearchRoomActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".models.workOrder.createOrder.CreateOrderSubmitActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".models.workdesk.checkVisitor.CheckVisitorListActivity" />
+        <activity android:name=".models.workdesk.checkVisitor.DealVisitorRequestActivity" />
+        <activity android:name=".models.workdesk.checkVisitor.PropertyVisitorRecordActivity" />
+    </application>
+
+</manifest>
