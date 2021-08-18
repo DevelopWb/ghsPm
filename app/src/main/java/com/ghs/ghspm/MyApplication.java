@@ -14,8 +14,6 @@ import com.ghs.ghspm.base.network.networkProxy.HttpProxy;
 import com.ghs.ghspm.base.network.okgo.OkGoInterceptor;
 import com.ghs.ghspm.base.network.okgo.OkgoTool;
 import com.ghs.ghspm.models.push.AliPushManager;
-import com.ghs.ghspm.tools.BuglyConfig;
-import com.ghs.ghspm.tools.Contract;
 import com.ghs.ghspm.tools.CrashHandler;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheEntity;
@@ -57,12 +55,12 @@ public class MyApplication extends Application {
         CrashHandler crashHandler = CrashHandler.getInstance();
         crashHandler.init(getApplicationContext());
 
-        if (!IsDeBugMoDe) {
-            BuglyConfig.init(this);
-            Contract.BASE_URL = Contract.BASE_URL_RELEASE;
-        }else{
-            Contract.BASE_URL = Contract.BASE_URL_DEBUG;
-        }
+//        if (!IsDeBugMoDe) {
+//            BuglyConfig.init(this);
+//            Contract.BASE_URL = Contract.BASE_URL_RELEASE;
+//        }else{
+//            Contract.BASE_URL = Contract.BASE_URL_DEBUG;
+//        }
 
         Hawk.init(this).build();
         initUMConfig();

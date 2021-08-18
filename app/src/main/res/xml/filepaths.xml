@@ -2,5 +2,14 @@
 <paths>
     <!-- external-path:sd ；path:你的应用保存文件的根目录；name随便定义-->
     <!-- root-path 手机存储根目录 -->
-    <root-path path="" name="ghspm_root" />
+    <root-path path="." name="ghspm_root" />
+    <files-path path="files" name="files" />
+    <cache-path path="files" name="cache" />
+    <external-path path="files" name="external" />
+    <external-files-path path="files" name="externalfiles"/>
+    <!-- 此标签需要 support 25.0.0以上才可以使用-->
+    <external-cache-path  path="files" name="externalcache"/>
+    <external-path name="beta_external_path" path="Download/"/>
+    <!--/storage/emulated/0/Android/data/com.bugly.upgrade.demo/files/apk/-->
+    <external-path name="beta_external_files_path" path="Android/data/"/>
 </paths>

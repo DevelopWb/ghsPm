@@ -96,8 +96,6 @@ dependencies {
 
     //图片缩放库
     implementation 'com.bm.photoview:library:1.4.1'
-//bugly 升级
-    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
     implementation 'com.android.support:support-annotations:27+'
     //沉浸式
     implementation 'com.gyf.immersionbar:immersionbar:2.3.2-beta01'

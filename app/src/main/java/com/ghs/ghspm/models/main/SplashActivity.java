@@ -54,24 +54,24 @@ public class SplashActivity extends BaseActivity {
     }
 
     private void initSplashActivity() {
-
-            if (Hawk.contains(HawkProperty.LOGIN_BEAN)) {
-                String propertyName = UserInfoUtil.getInstance().getPropertyName();
-                if (StrUtils.isStringValueOk(propertyName)) {
-                    if (getIntent() != null) {
-                        Intent intent = new Intent(this, MainActivity.class);
-                        String noticeType = getIntent().getStringExtra(AliPushManager.PUSH_NOTICE_TYPE);
-                        intent.putExtra(AliPushManager.PUSH_NOTICE_TYPE, noticeType);
-                        startActivity(intent);
-                    } else {
-                        startActivity(new Intent(this, MainActivity.class));
-                    }
-                } else {
-                    startActivity(new Intent(this, SelectPropertyActivity.class));
-                }
-            }else{
-                startActivity(new Intent(this, LoginActivity.class));
-            }
+        startActivity(new Intent(this, MainActivity.class));
+//            if (Hawk.contains(HawkProperty.LOGIN_BEAN)) {
+//                String propertyName = UserInfoUtil.getInstance().getPropertyName();
+//                if (StrUtils.isStringValueOk(propertyName)) {
+//                    if (getIntent() != null) {
+//                        Intent intent = new Intent(this, MainActivity.class);
+//                        String noticeType = getIntent().getStringExtra(AliPushManager.PUSH_NOTICE_TYPE);
+//                        intent.putExtra(AliPushManager.PUSH_NOTICE_TYPE, noticeType);
+//                        startActivity(intent);
+//                    } else {
+//                        startActivity(new Intent(this, MainActivity.class));
+//                    }
+//                } else {
+//                    startActivity(new Intent(this, SelectPropertyActivity.class));
+//                }
+//            }else{
+//                startActivity(new Intent(this, LoginActivity.class));
+//            }
 
         finish();
     }
